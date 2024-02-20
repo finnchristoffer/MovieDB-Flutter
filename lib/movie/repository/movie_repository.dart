@@ -1,5 +1,6 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter_movie_db/movie/models/movie_model.dart';
 
 abstract class MovieRepository {
-  Future<MovieResponseModel> getDiscover({int page = 1});
+  Future<Either<String, MovieResponseModel>> getDiscover({int page = 1});
 }
